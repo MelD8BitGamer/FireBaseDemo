@@ -1,0 +1,155 @@
+
+SO JUST LIKE COCOAPODS
+When you make a project with cocoa pods you need to initialize by pressing
+Pod init
+So this creates a podfile inside our project
+
+first lets open pod file if you have dependency then you edit it
+
+so if you want firebase you write inside the podfile so if you want ALamoFire you write:  pod 'Alamofire'
+if you want Firebase Store write: pod 'FireBaseStore'
+inside the podfile itself
+ In this case we are going to use: pod 'Firebase/Auth' for this.
+ go to terminal and type pod install
+ YOU MUST CLOSE YOUR APP AND NOW OPEN IT BACK UP IN XSWORKSPACE
+ then in AppDelelgate
+ import UIKit
+ import Firebase
+ 
+ then in AppDelegate func didFinishLaunchingWithOptions
+ // Configuring Firebase step 2
+   FirebaseApp.configure()
+   return true
+ }
+ 
+ FireBase
+ RESOURCES: https://console.firebase.google.com/u/0/
+ IS known as a backend service ; so you are taping into an existing backend and working with it.
+ Authentication - my user need to be logged in to my account.
+ Can we sign in users to our backend. can i connect my xcode project to firebase and can my user sign in
+
+ Authentication, Database and Storage
+
+ Database will house the game data (hold all the data for it)
+
+ There are prices to the firebase storage the free stuff is about 5G
+
+ Google Analytics should be kept enabled because it gives you lots of options
+
+ YOu need a plist that connects your firbase app to your x code projects
+ click on ios and add it to your project
+ we will need a bundleID and put it in our firebase project
+ that bundleID follows that app and make sure you register the app before you give the bundleID and the google services file is what communicates with the firebase google services
+ we will not use a app store ID cause it is for demo purposes
+ we get a google info plist is very important and this is how it knows what app it is going to
+ so follow to download the plist
+ after you register
+ Download config file
+ 
+ Google Plist file is recommended look here in this video TIME: 1:30:20 https://www.youtube.com/watch?v=n0z2uSDY2Nw
+ Add Firebase SDK
+ Instructions for CocoaPods
+ |
+ Download ZIPUnityC++
+ Google services use CocoaPods to install and manage dependencies. Open a terminal window and navigate to the location of the Xcode project for your app.
+
+ Create a Podfile if you don't have one:
+
+ pod init
+ Open your Podfile and add:
+
+ # add the Firebase pod for Google Analytics
+ pod 'Firebase/Analytics'
+ # add pods for any other desired Firebase products
+ # https://firebase.google.com/docs/ios/setup#available-pods
+ Save the file and run:
+
+ pod install
+ This creates an .xcworkspace file for your app. Use this file for all future development on your application.
+ we will use cocoa pods
+ This willhouse our pod an app
+ we will pod init
+ then open podfile
+ underneath Pods for Firebase file and add
+ pod 'Firebase/Analytics'
+ then command s to save
+ then pod install
+ then close you r project
+ and open .xcworkspace
+
+ we will now work on xcworkspace
+ //MARK: 11:01am
+ now we click next on the firebase end and then we will copy the code snippet
+ import firebase
+  so this will communicate with each other
+
+ in the APPDelegate configure firebase 2 steps
+ then we install by writing in the pod file
+ pod 'Firebase/Auth'
+ then pod install
+
+
+ you should be good
+
+ look up firebase Authentication
+ https://firebase.google.com/docs/auth?authuser=0
+ we will sign up new users and log in existing users
+ https://firebase.google.com/docs/auth/ios/start?authuser=0
+
+
+ //NOW WE GET A COMPILER ERROR: Firebase-Demo[17034:798727] 6.18.0 - [Firebase/Analytics][I-ACS031025] Analytics screen reporting is enabled. Call +[FIRAnalytics setScreenName:setScreenClass:] to set the screen name or override the default screen class name. To disable screen reporting, set the flag FirebaseScreenReportingEnabled to NO (boolean) in the Info.plist
+  
+  //So we go to the firebase website into Authentication
+  SO if your app has sign in features it needs an apple account but for now we will just enable email but not the second one
+  
+  Firebase is really good with errors
+  //MARK: 11:57
+  YOu can see the users on the tab on the website and then we add the user on the
+  
+ //MARK: 11:58am
+ there are 2 database
+ there is a cloudfirestore database and its faster for querying everything
+ there are different rules you can use
+
+ https://developer.apple.com/app-store/review/guidelines/#sign-in-with-apple
+
+Xcworspace will have your pod project and cocoa pods and pods folder, podlock, with versions of library , we will no longer open our project in the same way we will use xcworkspace
+Please close any current Xcode sessions and use `CocoaPodsDemo.xcworkspace` for this project from now on.
+Pod installation complete! There are 0 dependencies from the Podfile and 0 total pods installed.
+Make sure from now on use xcworkspace
+
+
+to find the library you need then you google to find the package you need. there are some that are tranding like github trending .com
+https://medium.mybridge.co/23-amazing-ios-ui-libraries-written-in-swift-for-the-past-year-v-2019-3e5456318768
+you can star other libraries that help you in your projects.
+You can make your own library and submit it on cocoapods
+you can boost your resume with open source, fix the bug contribute to it and post it to open source
+
+alamo fire will be one we are using today
+so if you go to your podfile you need to write pod 'SnapKit' or in this case pod 'Alamofire'
+underneath #PODS FOR COCOAPODSDEMO or whatever your file name is
+
+remember the less dependency files the better. best practices for libraries in your project look at the issues and see it has been closed or being worked on or ignore. like is that the developer doing a good job at updating the dependency and as developers we can contribute to libraries nand it will show u way you like to support ets
+a way to boost your resume is to contribute to open source you can subit an issues and if you want to fix a bug make a pull request
+
+AlamoFire
+is the biggest network framework for github is alamo fire
+outside of APPLE, upload siles download files, doews image processing. it supports all swift package dependancies
+here is the resource to it https://github.com/Alamofire/Alamofire
+
+
+anytime you add a new libray in you r file by saying pod and the library and whatever number version
+if you dont care about the version just add the cocoa pood and it will install the latest version of it
+and everytime you edit your pod file you nave to type pod install in order to run it
+
+
+when installing pods you need to put then in '' marks as so ex: swift package manager
+pod 'SnapKit'
+
+SNAPKIT
+http://snapkit.io/docs/
+so many things you can do read the documentation
+you can update constraints or remake constraints
+
+CTRL CMMD Z will make the simulator shake up
+
